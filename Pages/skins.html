@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Glamorise</title>
+        <link rel="icon" href="../Images/Logo.png">
+        <link rel="stylesheet" href="../Styles/global-rules.css">
+        <link rel="stylesheet" href="../Styles/skins.css">
+    
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <ul>
+                    <a href="../index.html"><li>Home</li></a>
+                    <a href="skins.html"><li>Skins</li></a>
+                    <a href="skinsP.html"><li>Skin Problem</li></a>
+                    <a href="#"><li>Page4</li></a>
+                </ul>
+
+                <div class="logo">
+                    <img src="../Images/glamoriseLogo.png" alt="logo">
+                </div>
+            </div>
+        </header>
+        
+        <div class="skins">
+            <div class="container">
+                <div class="article">
+                    <h2 class="title" id="skinType">Lets talk about the different types of skin</h2>
+                    <p>There are different types of skin, and the characteristics differ according to the type of skin, and even the problems that the skin may face between each type.</p>
+                    <p>Let's get to know each type separately in a simple and clear way</p>
+
+                    <div class="section" id="">
+                        <h3 class="subTitle">Normal Skin</h3>
+                        <p>Normal skin is well-balanced, with even texture, small pores, and minimal imperfections. It's not too oily or dry. Keep it healthy with basic care: gentle cleansing, regular moisturizing, and sun protection. Since it's low-maintenance, a straightforward routine ensures your skin stays naturally vibrant.</p>
+                    </div>
+
+                    <div class="section" id="sensitiveSkin">
+                        <h3 class="subTitle">Sensitive Skin</h3>
+                        <p>Sensitive skin requires tender care due to its heightened reactivity to environmental factors. Individuals with sensitive skin often experience redness, itching, or irritation in response to certain products, weather conditions, or even stress.</p>
+                        <p>The key to managing sensitive skin lies in using gentle, hypoallergenic products with minimal fragrances and avoiding harsh ingredients. A consistent skincare routine involving soothing cleansers, fragrance-free moisturizers, and sunscreen specifically formulated for sensitive skin can help alleviate discomfort and promote a calmer complexion. It's crucial for those with sensitive skin to patch-test new products and consult dermatologists for tailored recommendations to prevent potential irritations.</p>
+                    </div>
+
+                    <div class="section" id="oilySkin">
+                        <h3 class="subTitle">Oily Skin</h3>
+                        <p>Oily skin, characterized by excess sebum and enlarged pores, requires a careful balance of control and hydration. Use gentle, oil-free cleansers, non-comedogenic moisturizers, and targeted acne treatments for a balanced routine. Regular, gentle exfoliation is key to preventing breakouts. Avoid harsh products that strip natural moisture to maintain a clear, balanced complexion. Consistency with a tailored routine is essential for healthy, radiant skin.</p>
+                    </div>
+
+                    <div class="section" id="combinationSkin">
+                        <h3 class="subTitle">Combination Skin</h3>
+                        <p>Based on its location, it presents characteristics of both dry and oily skin since the distribution of sebaceous and sweat glands is not homogeneous. The area with more oil is usually the T- zone (forehead, nose, and chin), while the skin on the cheeks is normal or dry.</p>
+                    </div>
+
+                    <div class="section" id="scalySkin">
+                        <h3 class="subTitle">Scaly Skin</h3>
+                        <p>Repeated skin irritation due to environmental factors, such as the sun, the wind, dryness or excessive humidity, may cause skin desquamation, that is the detachment of big scales from the epidermis, which sometimes look like fine dust. However, desquamation may also be the result of some condition, such as an allergic reaction, a fungal or staphylococcus infection, an immune system disorder or cancer, and of oncological treatments. In these cases, desquamation is usually accompanied by itching.</p>
+                    </div>
+                </div>
+
+                <div class="scan">
+                    <h2 class="title">Scan your skin right now!</h2>
+                    <p>You can now scan your skin without a doctor using our AI... just press the button and wait for results!</p>
+
+                    <div class="questions">
+                        <h3>Please fill out the questionnaire for a more accurate screening process:</h3>
+                        
+                        <div class="poll">
+                            <div class="perQ">
+                                <div>
+                                    <p>Whats your name?</p>
+                                    <input type="text" placeholder="Full Name" id="nameInp">
+                                </div>
+    
+                                <div>
+                                    <p>How old are you?</p>
+                                    <input type="text" placeholder="Age" id="ageInp">
+                                </div>
+                            </div>
+
+                            <div class="optionsQ">
+                                <div style="margin-bottom: 2em">
+                                    <p>How much time are you exposed to the sun during the day?</p>
+                                     <div class="options options-group2">
+                                        <div class="opt opt-group1 notChecked"><p>0h-2h</p></div>
+                                        <div class="opt opt-group1 notChecked"><p>3h-6h</p></div>
+                                        <div class="opt opt-group1 notChecked"><p>+6h</p></div>
+                                     </div>
+                                </div>
+
+                                <div>
+                                    <p>Do you have skin diseases?</p>
+                                    <div class="options options-group2">
+                                        <div class="opt opt-group2 notChecked"><p>Yes</p></div>
+                                        <div class="opt opt-group2 notChecked"><p>No</p></div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="scanBtn">
+                        <p id="scanP">SCAN MY SKIN</p>
+                        <div id="loadingLine"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+    <script>
+        // Option Questions Script
+        let optionsDiv = document.querySelector('options');
+        let optionsBtns = document.querySelectorAll('.opt');
+        function handleButtonClick(optionsBtns) {
+        optionsBtns.forEach((opt) => {
+            opt.addEventListener('click', () => {
+                optionsBtns.forEach((btn) => {
+                    btn.classList.remove('checked');
+                    btn.classList.add('notChecked');
+                });
+
+                opt.classList.remove('notChecked');
+                opt.classList.toggle('checked');
+            });
+            });
+        }
+
+        let optionsDiv1 = document.querySelector('.options-group1');
+        let optionsDiv2 = document.querySelector('.options-group2');
+        let optionsBtnsGroup1 = document.querySelectorAll('.opt-group1');
+        let optionsBtnsGroup2 = document.querySelectorAll('.opt-group2');
+
+        handleButtonClick(optionsBtnsGroup1);
+        handleButtonClick(optionsBtnsGroup2);
+
+
+
+        // Scan loading and result script
+        let scanButton = document.getElementById('scanBtn');
+        let scanP = document.getElementById('scanP');
+        let loadingLine = document.getElementById('loadingLine');
+        
+        let nameInput = document.getElementById('nameInp');
+        let ageInput = document.getElementById('ageInp');
+
+        scanButton.addEventListener('click', () => {
+           if(ageInput.value.length && nameInput.value.length > 0) {
+            scanButton.style.cssText = "height:35px; width:500px; border-radius:0; padding:0"
+    
+            setTimeout(() => {
+                loadingLine.style.cssText = 'animation: scanLoadingLine 2s 0s normal linear forwards';
+
+                setTimeout(() => {
+                   loadingLine.style.cssText = 'display:none';
+                   scanP.style.cssText = 'display:none';
+                   scanButton.style.cssText = 'width:100%; height:23em; background:#fff; border-radius:0; border:2px solid var(--s-color)';
+                }, 3000)
+             }, 1000)
+           } else {
+            scanButton.style.cssText = 'border:2px solid red;'
+           }
+
+        })
+    </script>
+</html>

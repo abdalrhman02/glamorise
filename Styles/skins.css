@@ -1,0 +1,178 @@
+
+.skins {
+    padding: 5em 0
+}
+.skins .container {
+    margin: 0 370px
+}
+
+.skins .title {
+    font-size: 33px;
+    padding-left: 15px;
+    position: relative;
+}
+.title::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70%;
+    width: 5px;
+    background-color: var(--t-color);
+}
+
+.skins .article {
+    /* width: 75% */
+}
+.skins .article p {
+    margin: 10px 0 15px;
+    line-height: 1.6em;
+}
+
+.skins .article .section {
+    margin: 3em 0 
+}
+.skins .article .section .subTitle {
+    width: fit-content;
+    font-size: 21px;
+    position: relative;
+}
+.skins .article .section .subTitle::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--t-color);
+}
+.skins .article .section p {
+    
+}
+
+body {
+    height: 1000vh;
+}
+
+.skins .scan {
+    margin-top: 8em;
+    position: relative;
+}
+.skins .scan h2 {
+    margin-bottom: 10px
+}
+
+.skins .scan #scanBtn {
+    height: 2.5em;
+    width: 10em;
+    padding: 5px;
+    font-size: 16px;
+    background-color: var(--t-color);
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 2.5em;
+    position: absolute;
+    transition: 1s;
+}
+.skins .scan #scanBtn:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.skins .scan #scanBtn #loadingLine {
+    transition: 1s;
+    /* animation: scanLoadingLine 0.5s 0s normal linear */
+}
+
+.skins .scan #scanBtn p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@keyframes scanLoadingText {
+    0% {transform: scale(1) translate(-50%, -50%)}
+    50% {transform: scale(1.01) translate(-50%, -58%)}
+    100% {transform: scale(1) translate(-50%, -50%)}
+}
+
+@keyframes scanLoadingLine {
+    0% { height:100%; width:0%; background-color:var(--s-color) }
+    100% { height:100%; width:100%; background-color:var(--s-color) }
+}
+
+
+.skins .scan .questions {
+    margin-top: 2em;
+}
+.skins .scan .questions h3 {
+    margin-bottom: 15px
+}
+.skins .scan .questions .poll {
+
+}
+.skins .scan .questions .poll .perQ {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4em;
+}
+.skins .scan .questions .poll .perQ div {
+    
+}
+.skins .scan .questions .poll .perQ div p {
+    margin-bottom: 3px
+}
+.skins .scan .questions .poll .perQ div input {
+    height: 2.5em;
+    width: 25em;
+    padding-left: 7px;
+    border: 2px solid var(--s-color);
+    border-radius: 3px;
+    outline: none;
+}
+
+
+.skins .scan .questions .poll .optionsQ {
+    margin-top: 2.5em
+}
+
+.skins .scan .questions .poll .optionsQ div p {
+
+}
+.skins .scan .questions .poll .optionsQ .options {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2em;
+    margin-top: 0.8em
+}
+.skins .scan .questions .poll .optionsQ .options .opt {
+    border: 2px solid var(--s-color);
+    border-radius: 4px;
+    height: 2em;
+    width: 4em;
+    position: relative;
+    cursor: pointer;
+    transition: .4s;
+}
+.skins .scan .questions .poll .optionsQ .options .opt.checked {
+    color: #fff;
+    background-color: var(--s-color)
+}
+.skins .scan .questions .poll .optionsQ .options .opt.notChecked {
+    color: #000;
+    background-color: #fff
+}
+.skins .scan .questions .poll .optionsQ .options .opt:hover {
+    transform: scale(1.03)
+}
+.skins .scan .questions .poll .optionsQ .options .opt p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}

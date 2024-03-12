@@ -30,7 +30,7 @@
             <div class="text">
                 <h1>Skin Care For Everyone</h1>
                 <p>We help you get the best care for your skin. Browse our website for more information.</p>
-                <a href="#"><button class="btn">More</button></a>
+                <button class="btn more">More</button>
             </div>
         </div>
 
@@ -54,7 +54,7 @@
             </div>
 
             <div class="box">
-                <img src="Images/Icons/laptop.png" alt="icon">
+                <img src="Images/Icons/" alt="icon">
                 <h3>Everything Here</h3>
                 <p>We provide everything through our website, from examining your skin to treating it. You don't have to worry about anything.</p>
             </div>
@@ -93,4 +93,15 @@
             </div> -->
         </div>
     </body>
+
+    <script>
+        let moreBtn = document.querySelector('.more');
+
+        moreBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 800,
+                behavior: 'smooth'
+            })
+        })
+    </script>
 </html>

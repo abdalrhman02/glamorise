@@ -104,9 +104,117 @@
                     </div>
 
                     <div id="scanBtn">
-                        <p id="scanP">SCAN MY SKIN</p>
+                        <p id="scanBtnP">SCAN MY SKIN</p>
                         <div id="loadingLine"></div>
+
+                        <div class="results">
+                            <div class="result disNone">
+                                <div class="userInfo">
+                                    <p class="name"></p>,
+                                    <p class="age"> </p>
+                                </div>
+
+                                <div class="resultInfo">
+                                    <h3 class="type">Your skin type is: <b>Normal Skin</b></h3>
+                                    <h4 class="issues">Normal skin types may sometimes face imbalance due to changes in environment or unsuitable skincare products.</h4>
+
+                                    <div class="advice">
+                                        <p>Here is some advices for you!</p>
+                                        <ul>
+                                            <li>Maintain Balance: Stick to a simple skincare routine with gentle products to preserve the skin's natural balance.</li>
+                                            <li>Stay Protected: Even though your skin may seem low-maintenance, don't forget to apply sunscreen daily to protect against sun damage and maintain skin health.</li>
+                                            <li>Hydrate Regularly: Keep your skin hydrated by drinking plenty of water and using a moisturizer daily to maintain its natural glow and elasticity.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="result disNone">
+                                <div class="userInfo">
+                                    <p class="name"></p>,
+                                    <p class="age"> </p>
+                                </div>
+
+                                <div class="resultInfo">
+                                    <h3 class="type">Your skin type is: <b>Sensitive Skin</b></h3>
+                                    <h4 class="issues">Reactivity to Products: Sensitive skin may react adversely to skincare products, leading to redness, irritation, or allergic reactions.</h4>
+
+                                    <div class="advice">
+                                        <p>Here is some advices for you!</p>
+                                        <ul>
+                                            <li>Patch Test New Products: Before applying any new skincare product to your face, do a patch test on a small area of skin to check for any adverse reactions.</li>
+                                            <li>Choose Gentle Formulations: Opt for skincare products labeled as hypoallergenic, fragrance-free, and formulated for sensitive skin to minimize the risk of irritation.</li>
+                                            <li>Handle with Care: Be gentle with your skin. Avoid harsh scrubbing or over-exfoliation, and use lukewarm water instead of hot water when cleansing to prevent aggravating sensitivity.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="result disNone">
+                                <div class="userInfo">
+                                    <p class="name"></p>,
+                                    <p class="age"> </p>
+                                </div>
+
+                                <div class="resultInfo">
+                                    <h3 class="type">Your skin type is: <b>Oily Skin</b></h3>
+                                    <h4 class="issues">Excess Sebum Production: Oily skin tends to produce an excess of sebum, leading to clogged pores, acne breakouts, and a shiny complexion.</h4>
+
+                                    <div class="advice">
+                                        <p>Here is some advices for you!</p>
+                                        <ul>
+                                            <li>Use Oil-Free Products: Opt for oil-free or non-comedogenic skincare products to avoid adding excess oil to your skin and exacerbating the issue.</li>
+                                            <li>Regular Cleansing: Cleanse your skin twice daily with a gentle, foaming cleanser to remove excess oil, dirt, and impurities without stripping away essential moisture.</li>
+                                            <li>Avoid Over-Drying: While it may be tempting to use harsh products to combat oiliness, avoid over-drying your skin as it can trigger increased oil production as your skin tries to compensate for the loss of moisture.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="result disNone">
+                                <div class="userInfo">
+                                    <p class="name"></p>,
+                                    <p class="age"> </p>
+                                </div>
+
+                                <div class="resultInfo">
+                                    <h3 class="type">Your skin type is: <b>Combination Skin</b></h3>
+                                    <h4 class="issues">Balancing Act: Combination skin presents the challenge of managing both oily and dry areas simultaneously, requiring a tailored approach to skincare.</h4>
+
+                                    <div class="advice">
+                                        <p>Here is some advices for you!</p>
+                                        <ul>
+                                            <li>Zone-Specific Care: Use different products for oily and dry areas of your face. For oily zones, opt for oil-free products, while dry areas may benefit from richer moisturizers.</li>
+                                            <li>Gentle Cleansing: Cleanse your face with a gentle, pH-balanced cleanser to remove impurities without stripping away natural oils.</li>
+                                            <li>Targeted Treatment: Address specific concerns in different areas of your face. For example, use oil-absorbing products on oily areas and hydrating products on dry patches.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="result disNone">
+                                <div class="userInfo">
+                                    <p class="name"></p>,
+                                    <p class="age"> </p>
+                                </div>
+
+                                <div class="resultInfo">
+                                    <h3 class="type">Your skin type is: <b>Scaly Skin</b></h3>
+                                    <h4 class="issues">Dryness and Flakiness: Scaly skin often experiences dryness, flakiness, and discomfort due to a lack of moisture and exfoliation.</h4>
+
+                                    <div class="advice">
+                                        <p>Here is some advices for you!</p>
+                                        <ul>
+                                            <li>Moisturize Regularly: Keep your skin hydrated by using a rich, emollient moisturizer daily to soothe dryness and prevent flakiness.</li>
+                                            <li>Gentle Exfoliation: Incorporate gentle exfoliation into your skincare routine to remove dead skin cells and promote cell turnover. However, avoid over-exfoliating, as this can further irritate scaly skin.</li>
+                                            <li>Hydrating Ingredients: Look for skincare products containing hydrating ingredients like hyaluronic acid, glycerin, and ceramides to replenish moisture and restore the skin's barrier function.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -139,15 +247,16 @@
         handleButtonClick(optionsBtnsGroup1);
         handleButtonClick(optionsBtnsGroup2);
 
-
+        
 
         // Scan loading and result script
         let scanButton = document.getElementById('scanBtn');
-        let scanP = document.getElementById('scanP');
+        let scanP = document.getElementById('scanBtnP');
         let loadingLine = document.getElementById('loadingLine');
-        
+        let results = document.querySelectorAll('.results .result');
+                
         let nameInput = document.getElementById('nameInp');
-        let ageInput = document.getElementById('ageInp');
+        let ageInput = document.getElementById('ageInp');        
 
         scanButton.addEventListener('click', () => {
            if(ageInput.value.length && nameInput.value.length > 0) {
@@ -159,13 +268,22 @@
                 setTimeout(() => {
                    loadingLine.style.cssText = 'display:none';
                    scanP.style.cssText = 'display:none';
-                   scanButton.style.cssText = 'width:100%; height:23em; background:#fff; border-radius:0; border:2px solid var(--s-color)';
+                   scanButton.style.cssText = 'width:fit-content; height:fit-content; background:#fff; border-radius:0; border:2px solid var(--t-color); padding:1em';
+                   results[Math.floor(Math.random() * 5)].classList.add('disBlock');
+
+                   // Display the name and age
+                   let userInfos = document.querySelectorAll('.result .userInfo');
+                   userInfos.forEach(userInfo => {
+                        let nameElement = userInfo.querySelector('.name');
+                        let ageElement = userInfo.querySelector('.age');
+                        nameElement.innerHTML = nameInput.value;
+                        ageElement.innerHTML = ageInput.value;
+                    });
                 }, 3000)
              }, 1000)
            } else {
             scanButton.style.cssText = 'border:2px solid red;'
            }
-
         })
     </script>
 </html>

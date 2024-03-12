@@ -47,9 +47,6 @@
     height: 3px;
     background-color: var(--t-color);
 }
-.skins .article .section p {
-    
-}
 
 body {
     height: 1000vh;
@@ -72,20 +69,69 @@ body {
     color: #fff;
     border-radius: 4px;
     margin-top: 2.5em;
-    position: absolute;
+    position: relative;
     transition: 1s;
 }
 .skins .scan #scanBtn:hover {
     cursor: pointer;
     opacity: .8;
 }
+.skins .scan #scanBtn .results {
+
+}
+.skins .scan #scanBtn .results .result {
+    color: #000;
+}
+.skins .scan #scanBtn .results .result .userInfo {
+    display: flex;
+    font-size: 17px
+}
+.skins .scan #scanBtn .results .result .resultInfo {
+    margin-top: 1em
+}
+.skins .scan #scanBtn .results .result .resultInfo .type {
+
+}
+.skins .scan #scanBtn .results .result .resultInfo .type b {
+    background-color: var(--t-color);
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.skins .scan #scanBtn .results .result .resultInfo .issues {
+    margin: 10px 0 20px;
+    max-width: 700px;
+}
+.skins .scan #scanBtn .results .result .resultInfo .advice p {
+    position: relative;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+.skins .scan #scanBtn .results .result .resultInfo .advice p::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--t-color);
+    width: 6em;
+    height: 3px;
+}
+.skins .scan #scanBtn .results .result .resultInfo .advice ul {
+    margin-left: 20px
+}
+.skins .scan #scanBtn .results .result .resultInfo .advice ul li {
+    margin-bottom: 12px;
+    max-width: 800px;
+    line-height: 1.5em;
+}
+
 
 .skins .scan #scanBtn #loadingLine {
     transition: 1s;
     /* animation: scanLoadingLine 0.5s 0s normal linear */
 }
 
-.skins .scan #scanBtn p {
+.skins .scan #scanBtn #scanBtnP {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -103,6 +149,8 @@ body {
     0% { height:100%; width:0%; background-color:var(--s-color) }
     100% { height:100%; width:100%; background-color:var(--s-color) }
 }
+
+
 
 
 .skins .scan .questions {
@@ -176,3 +224,4 @@ body {
     width: 100%;
     text-align: center;
 }
+

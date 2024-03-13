@@ -1,0 +1,120 @@
+.doctors {
+
+}
+.doctors .container {
+    margin: 4em 180px;
+}
+
+.doctors .title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.doctors .title h1 {
+    border-bottom: 3px solid var(--t-color);
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+    font-size: 37px;
+    text-transform: uppercase;
+
+}
+
+.doctors .title p {
+    max-width: 800px;
+}
+
+.doctors .doctorsList {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.doctors .doctorsList .doctor {
+    position: relative;
+    border: 2px solid var(--s-color);
+    border-radius: 3px;
+    background: var(--f-color);
+    padding: 2.5em;
+    margin-bottom: 5em;
+    width: 80%
+}
+.doctors .doctorsList .doctor .settingsIcon {
+    position: absolute;
+    right: 1em;
+    top: 8px;
+    width: 2.6em;
+}
+.doctors .doctorsList .doctor .settingsIcon {
+    cursor: pointer;
+}
+
+.doctors .doctorsList .doctor .info {
+    display: flex
+}
+.doctors .doctorsList .doctor .info .prImage {
+    margin-right: 20px
+}
+.doctors .doctorsList .doctor .info .prImage img {
+    width: 12em;
+    background-color: var(--s-color);
+    border-radius: 50%;
+    border: 1px solid var(--t-color);
+}
+
+.doctors .doctorsList .doctor .info .doctorInfo {
+    line-height: 1.6em;
+}
+.doctors .doctorsList .doctor .info .doctorInfo .name {
+    font-size: 25px;
+    width: fit-content;
+    border-bottom: 3px solid var(--s-color);
+    margin-bottom: 5px;
+}
+.doctors .doctorsList .doctor .info .doctorInfo .exp {
+
+}
+.doctors .doctorsList .doctor .info .doctorInfo .description {
+    max-width: 600px;
+    font-style: italic;
+    margin-top:5px
+}
+
+
+.doctors .doctorsList .doctor .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 3em
+}
+.doctors .doctorsList .doctor .contact button {
+    background-color: var(--t-color);
+    color: #FFF;
+    width: 11em;
+    height: 2.5em;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+}
+.doctors .doctorsList .doctor .contact button:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+.doctors .doctorsList .doctor .contact .number {
+    display: flex;
+    align-items: center;
+    background-color: var(--s-color);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.doctors .doctorsList .doctor .contact .number img {
+    width: 2em;
+    margin-right: 5px
+}
+.doctors .doctorsList .doctor .contact .number p {
+
+}

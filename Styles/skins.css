@@ -48,12 +48,9 @@
     background-color: var(--t-color);
 }
 
-body {
-    height: 1000vh;
-}
 
 .skins .scan {
-    margin-top: 8em;
+    margin: 8em 0 4em;
     position: relative;
 }
 .skins .scan h2 {

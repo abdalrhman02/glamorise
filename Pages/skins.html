@@ -282,10 +282,11 @@
         let results = document.querySelectorAll('.results .result');
                 
         let nameInput = document.getElementById('nameInp');
-        let ageInput = document.getElementById('ageInp');        
+        let ageInput = document.getElementById('ageInp');
+        let buttonClicked = false;     
 
         scanButton.addEventListener('click', () => {
-           if(ageInput.value.length && nameInput.value.length > 0) {
+           if(buttonClicked = false && ageInput.value.length && nameInput.value.length > 0) {
             scanButton.style.cssText = "height:35px; width:500px; border-radius:0; padding:0"
     
             setTimeout(() => {
@@ -305,11 +306,14 @@
                         nameElement.innerHTML = nameInput.value;
                         ageElement.innerHTML = ageInput.value;
                     });
-                }, 3000)
+                }, 3000);
+
+                buttonClicked = true;
              }, 1000)
            } else {
-            scanButton.style.cssText = 'border:2px solid red;'
+            return;
            }
         })
+
     </script>
 </html>

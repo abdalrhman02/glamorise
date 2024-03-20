@@ -1,0 +1,218 @@
+
+.container .title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .title h1 {
+    border-bottom: 3px solid var(--t-color);
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+    font-size: 37px;
+    text-transform: uppercase;
+
+}
+.container .title p {
+    max-width: 800px;
+}
+
+
+.products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7em;
+    margin: 5em 0 7em
+}
+.products .product .image {
+    position: relative;
+    background-color: var(--s-color);
+    color: #fff;
+    border-radius: 10px;
+    height: 20em;
+    width: 19em;
+}
+.products .product .image .pType {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    background-color: var(--t-color);
+    padding: 2px 6px;
+    border-radius: 5px;
+    z-index: 5
+}
+.products .product .image .off {
+    position: absolute;
+    right: -12px;
+    top: -16px;
+    background-color: var(--t-color);
+    border-radius: 50%;
+    text-align: center;
+    padding: 16px 12px;
+    font-size: 24px;
+    transform: rotate(10deg);
+}
+.products .product .image img {
+    width: 19em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.products .product .pInfo {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--t-color);
+    font-weight: 500;
+    position: relative;
+}
+.products .product .pInfo .pPrice {
+    margin: 3px 0
+}
+.products .product .pInfo .more {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.products .product .pInfo .rate {
+    position: absolute;
+    right: 0;
+}
+.products .product .pInfo .rate ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3px;
+    list-style: none;
+}
+.products .product .pInfo .rate ul li img {
+    width: 1em
+}
+.products .product .pInfo .rate p {
+    font-size: 14px
+} 
+
+
+
+/* Product Page */
+
+.productPage .container {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 5em; */
+    margin: 7em 120px
+}
+
+.productPage .image {
+    position: relative;
+    background-color: var(--f-color)
+}
+.productPage .image::before {
+    content: '';
+    position: absolute;
+    top: 4em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--s-color);
+    width: 18em;
+    height: 18em;
+    border-radius: 50%;
+    z-index: 0;
+}
+.productPage .image .pType {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: var(--t-color);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+.productPage .image .off {
+    display: none;
+}
+.productPage .image img {
+    width: 30em;
+    position: relative;
+}
+
+
+.productPage .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5em;
+}
+.productPage .info .prName {
+    font-size: 48px;
+    position: relative;
+}
+.productPage .info .prName::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background-color: var(--t-color);
+    width: 2em;
+    height: 4px;
+}
+.productPage .info .description {
+    line-height: 1.7em;
+    max-width: 550px;
+    margin-top: 1em
+}
+
+.productPage .info .reviews {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+.productPage .info .reviews ul {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    list-style: none;
+}
+.productPage .info .reviews ul li img {
+    width: 1.6em;
+}
+
+.productPage .info .price {
+    color: #fff;
+    display: flex;
+    gap: 0.6em;
+    margin-top: 1em
+}
+.productPage .info .price .currentPrice,
+.productPage .info .price .prevPrice {
+    background-color: var(--s-color);
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 18px
+}
+.productPage .info .price .prevPrice {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.productPage .info .buyBtn {
+    width: 22em;
+    height: 2.5em;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1.8em;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--t-color);
+    text-transform: uppercase;
+}
+.productPage .info .buyBtn:hover {
+    cursor: pointer;
+    opacity: .9;
+}

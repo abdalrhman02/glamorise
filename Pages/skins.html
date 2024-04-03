@@ -99,6 +99,17 @@
                                      </div>
                                 </div>
                             </div>
+
+
+                            <div class="photo">
+                                <label for="inpFile" id="drop-area">
+                                    <input type="file" id="inpFile" accept="image/*">
+                                    <div id="img-view">
+                                        <img src="../Images/Icons/photo.png" class="imgIcon"/>
+                                        <p>Add a photo for your skin.</p>
+                                    </div>
+                                </label>
+                            </div>
                         </div>
 
                     </div>
@@ -313,7 +324,22 @@
            } else {
             return;
            }
-        })
+        });
+
+
+        let dropArea = document.getElementById('drop-area');
+        let inpFile = document.getElementById('inpFile');
+        let imgView = document.getElementById('img-view');
+
+        inpFile.addEventListener('change', uploadImage);
+        
+        function uploadImage() {
+            console.log(inpFile.files[0])
+            let imgLink = URL.createObjectURL(inpFile.files[0]);
+            imgView.style.backgroundImage = `url(${imgLink})`;
+            imgView.style.backgroundSize = "cover";
+            imgView.textContent = ''
+        }
 
     </script>
 </html>

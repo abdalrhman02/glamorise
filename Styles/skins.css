@@ -149,7 +149,6 @@
 
 
 
-
 .skins .scan .questions {
     margin-top: 2em;
 }
@@ -222,3 +221,43 @@
     text-align: center;
 }
 
+
+.skins .scan .questions .poll .photo {
+    margin-top: 2em
+}
+.skins .scan .questions .poll .photo label {
+    position: relative;
+    border: 2px dashed black;
+    height: 20em;
+    width: 22em;
+    display: block;
+    border-radius: 10px;
+}
+.skins .scan .questions .poll .photo label input {
+    display: none
+}
+
+.skins .scan .questions .poll .photo label #img-view {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.skins .scan .questions .poll .photo label div .imgIcon {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+}
+.skins .scan .questions .poll .photo label div p {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%); 
+}
+.skins .scan .questions .poll .photo label div img {
+    height: 16em;
+    width: 18em;
+}
